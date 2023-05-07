@@ -11,4 +11,5 @@ Steps
 
 APis
 http://localhost:4000/headers/topHeader
-[pass 1,2,3]http://localhost:4000/overview/profileById/1
+http://localhost:4000/api/players/2/opponentsStats
+http://localhost:4000/api/players/2/matchHistory

@@ -2,26 +2,20 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Games', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      start_time: {
+        type: Sequelize.DATE
       },
-      current_stats: {
-        type: Sequelize.JSONB
+      end_time: {
+        type: Sequelize.DATE
       },
-      all_time_stats: {
-        type: Sequelize.JSONB
-      },
-      favorite_rolls: {
-        type: Sequelize.JSONB
-      },
-      favorite_openings: {
+      game_data: {
         type: Sequelize.JSONB
       },
       createdAt: {
@@ -35,6 +29,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('Games');
   }
 };

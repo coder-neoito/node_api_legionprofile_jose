@@ -31,7 +31,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/headers", headersRoutes)
-app.use("/overview", overviewRoute)
+app.use("/api", overviewRoute)
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
